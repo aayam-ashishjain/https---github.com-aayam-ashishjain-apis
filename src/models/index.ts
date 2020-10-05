@@ -5,3 +5,4 @@ export * from './organization.model';
 export * from './stock.model';
 export * from './sector.model';
 export * from './stock-price.model';
+export * from './all-stocks-to-consider.model';

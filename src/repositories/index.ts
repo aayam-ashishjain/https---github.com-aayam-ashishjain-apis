@@ -5,3 +5,4 @@ export * from './user.repository';
 export * from './sector.repository';
 export * from './stock.repository';
 export * from './stock-price.repository';
+export * from './all-stocks-to-consider.repository';
