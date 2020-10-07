@@ -2,34 +2,28 @@ import {inject, lifeCycleObserver, LifeCycleObserver} from '@loopback/core';
 import {juggler} from '@loopback/repository';
 
 const config = {
-  name: 'AdsSql',
-  connector: 'mssql',
+  name: 'AdsMySql',
+  connector: 'mysql',
   url: '',
-  host: 'SQL5063.site4now.net',
+  host: 'mysql5021.site4now.net',
   port: 0,
-  user: 'DB_9C44CC_adsApi_admin',
-  password: 'adsapi@2020',
-  database: 'DB_9C44CC_adsApi',
+  user: '9c44cc_invest',
+  password: 'invest@123',
+  database: 'db_9c44cc_invest'
 };
-
-// server  :adsapi.database.windows.net
-//uid : adsapi_admin
-// pwd:  sa@azureDB
-//database name :  DB_adsApi
-//
 
 // Observe application's life cycle to disconnect the datasource when
 // application is stopped. This allows the application to be shut down
 // gracefully. The `stop()` method is inherited from `juggler.DataSource`.
 // Learn more at https://loopback.io/doc/en/lb4/Life-cycle.html
 @lifeCycleObserver('datasource')
-export class AdsSqlDataSource extends juggler.DataSource
+export class AdsMySqlDataSource extends juggler.DataSource
   implements LifeCycleObserver {
-  static dataSourceName = 'AdsSql';
+  static dataSourceName = 'AdsMySql';
   static readonly defaultConfig = config;
 
   constructor(
-    @inject('datasources.config.AdsSql', {optional: true})
+    @inject('datasources.config.AdsMySql', {optional: true})
     dsConfig: object = config,
   ) {
     super(dsConfig);
