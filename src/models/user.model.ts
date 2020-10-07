@@ -22,11 +22,22 @@ export class User extends Entity {
   Password: string;
 
   @property({
+    type: 'string',
+    required: true,
+  })
+  FirstName: string;
+
+  @property({
+    type: 'string',
+    required: true,
+  })
+  LastName: string;
+
+  @property({
     type: 'number',
     default: 1,
   })
   isActive?: number;
-
 
   constructor(data?: Partial<User>) {
     super(data);

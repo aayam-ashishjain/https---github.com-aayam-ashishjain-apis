@@ -51,8 +51,11 @@
     "@loopback/rest": "^6.0.0",
     "@loopback/rest-explorer": "^2.2.8",
     "@loopback/service-proxy": "^2.3.6",
+    "@types/lodash": "^4.14.161",
+    "isemail": "^3.2.0",
     "loopback-connector-mssql": "^3.8.0",
     "nodemon": "^2.0.4",
+    "regex": "^0.1.1",
     "tslib": "^2.0.0"
   },
   "devDependencies": {
